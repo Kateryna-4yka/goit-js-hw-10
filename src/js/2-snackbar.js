@@ -24,17 +24,14 @@ let time = delay.value;
     iziToast.success({
       position: 'topRight',
       message: `✅ Fulfilled promise in ${delay} ms`,
-  }); 
-  console.log(`✅ Fulfilled promise in ${delay} ms`)})
+  });})
 
 
   .catch(delay => {
     iziToast.error({
       position: 'topRight',
       message: `❌ Rejected promise in ${delay} ms`,
-  });
-    
-    console.log(`❌ Rejected promise in ${delay} ms`)}) 
+  });}) 
 
     .finally (()=> {    
       delay.value = "";

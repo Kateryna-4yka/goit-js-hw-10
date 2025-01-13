@@ -9,6 +9,7 @@ const button = document.querySelector("[data-start]");
 button.disabled = true;
 
 const input = document.querySelector("#datetime-picker");
+input.disabled = false;
 const valueDays = document.querySelector("[data-days]");
 const valueHours = document.querySelector("[data-hours]");
 const valueMinutes = document.querySelector("[data-minutes]");
@@ -43,8 +44,8 @@ else {iziToast.error({
 }},};
 
 const countdown = () => {
-        button.disabled = true;
-        input.disabled = true;
+    button.disabled = true;
+    input.disabled = true;
 
 
 intervalID = setInterval(()=>{
@@ -73,6 +74,7 @@ function convertMs(ms) {
 }
 if (deff<0) {clearInterval(intervalID); 
     input.disabled = false;
+
  } else {
 
 const content = convertMs(deff);
@@ -87,7 +89,7 @@ valueHours.textContent = content.hours;
 valueMinutes.textContent = content.minutes;
 valueSeconds.textContent = content.seconds;
 
-input.disabled = false;
+
 }}, 1000);
     
        
